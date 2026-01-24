@@ -1,41 +1,41 @@
-# Bộ Bài Tập Thực Hành Solidity – Từ Cơ Bản Đến Nâng Cao
+# Solidity Practice Exercises - From Basics to Advanced
 
-Bộ sưu tập 6 bài tập được thiết kế dành riêng cho người mới bắt đầu học Solidity. Các bài được sắp xếp theo **độ khó tăng dần** giúp bạn nắm chắc từng khái niệm một cách tự nhiên và vững chắc nhất.
+This set of 6 exercises is designed for beginners learning Solidity. The exercises are ordered by **increasing difficulty** to help you build a strong foundation step by step.
 
 ---
 
-## Lộ Trình Học (Nên làm lần lượt từ 1 → 6)
+## Learning Path (Do in order from 1 to 6)
 
 1. [**AddressBook**](./contracts/01_AddressBook.sol)  
-   Danh bạ địa chỉ: làm quen với `mapping`, mảng động, `push`, `delete`, và so sánh string bằng `keccak256`.
+   Address book: practice `mapping`, dynamic arrays, `push`, `delete`, and string comparison with `keccak256`.
 
 2. [**TokenTransfer**](./contracts/02_TokenTransfer.sol)  
-   Tạo token cơ bản có quyền mint chỉ dành cho owner – học pattern `owner` và chuyển token đơn giản.
+   Basic token with owner-only minting - learn the `owner` pattern and simple token transfers.
 
 3. [**SimpleBank**](./contracts/03_SimpleBank.sol)  
-   Ngân hàng đơn giản: nạp tiền, rút tiền, xem số dư – làm quen với `payable` và quản lý ETH.
+   Simple bank: deposit, withdraw, and check balances - practice `payable` and ETH management.
 
 4. [**SimpleToken**](./contracts/04_SimpleToken.sol)  
-   Viết token ERC-20 cơ bản hoàn chỉnh: `transfer`, `approve`, `transferFrom`, `allowance` và các `event`.
+   Basic ERC-20 style token: `transfer`, `approve`, `transferFrom`, `allowance`, and events.
 
 5. [**Election**](./contracts/05_Election.sol)  
-   Hệ thống bầu cử: thêm ứng cử viên, bỏ phiếu 1 lần/người, tìm người thắng (hỗ trợ trường hợp hòa), sử dụng `modifier` và `event`.
+   Election system: add candidates, vote once per address, find winners (including ties), use `modifier` and `event`.
 
 6. [**Lottery**](./contracts/06_Lottery.sol)  
-   Xổ số tự động: mua vé theo giá cố định, hết thời gian thì owner chọn ngẫu nhiên người thắng bằng `keccak256` + `block.prevrandao`, sau đó reset vòng mới.
+   Lottery: buy tickets at a fixed price, after time ends owner picks a random winner using `keccak256` + `block.prevrandao`, then reset for the next round.
 
 ---
 
-### Hướng dẫn sử dụng
+### Usage Guide
 
-- Mỗi file chỉ chứa **khung code + các dòng `// TODO`** rõ ràng, **hoàn toàn không có đáp án**.
-- Nên dùng **[Remix IDE](https://remix.ethereum.org)** để code và test nhanh nhất.
-- Hãy làm đúng thứ tự **1 → 6** để tránh bị hổng kiến thức.
-- Chỉ xem đáp án khi bạn đã **tự viết xong và chạy test thành công**.
-- Hoàn thành cả 6 bài = bạn đã nắm đủ nền tảng để **tự viết hầu hết các smart contract cơ bản đến trung cấp**!
+- Each file contains **a code skeleton + clear `// TODO` lines**, with **no answers** included.
+- Use **[Remix IDE](https://remix.ethereum.org)** for the fastest coding and testing.
+- Follow the order **1 → 6** to avoid knowledge gaps.
+- Only check solutions after you **finish and test your own code**.
+- Completing all 6 exercises means you have enough foundation to **write most basic to intermediate smart contracts**.
 
-Chúc bạn học Solidity thật vui và sớm deploy contract đầu tay lên mainnet! 🚀
-Tác giả: Phan Đức 
+Good luck learning Solidity and deploying your first contract to mainnet!
+Author: Phan Duc
 
 ---
 

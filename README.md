@@ -1,7 +1,7 @@
 # Solidity Smart Contract Learning Repository
 
 
-## 🌟 Highlights
+## Highlights
 
 ### Introduction to Solidity
 
@@ -61,6 +61,73 @@ contract Child is Parent {
         return sayHello();
     }
 }
+```
+
+## Setup and Run in Remix
+
+Remix is a browser-based IDE, so there is nothing to install to compile or run these contracts.
+
+### What you need
+
+- A modern web browser (Chrome, Firefox, or Edge).
+- Optional: MetaMask if you want to deploy to a testnet. For local testing, Remix VM is enough.
+
+### Steps
+
+1. Open Remix: https://remix.ethereum.org
+2. Create a workspace:
+   - Use **File explorers > Workspaces > Create** and name it (e.g., `solidity-basics`).
+3. Add the contracts:
+   - Drag and drop the folder(s) from this repo into the Remix file explorer, or
+   - Copy the `.sol` files into matching folders in Remix.
+4. Compile:
+   - Open the **Solidity Compiler** tab.
+   - Set the compiler version that matches the `pragma` in the file.
+   - Click **Compile**.
+5. Deploy and run:
+   - Open the **Deploy & Run Transactions** tab.
+   - Choose **Remix VM** as the environment for local testing.
+   - Click **Deploy**, then interact with the functions below.
+
+### Dependencies
+
+- None required for Remix-only usage.
+
+## Local Setup with Hardhat
+
+Use this if you want to compile and test locally with Node.js.
+
+### Requirements
+
+- Node.js 18+ and npm (install from https://nodejs.org)
+
+### Install and Initialize
+
+Run these commands from the repo root:
+
+```bash
+npm init -y
+npm install --save-dev hardhat
+npx hardhat init
+```
+
+### Add Contracts
+
+- Copy the folder(s) you want into the `contracts/` directory, or
+- Move all `.sol` files into `contracts/` and keep the folder structure.
+
+### Compile
+
+```bash
+npx hardhat compile
+```
+
+### Run a Script (Optional)
+
+Create a script in `scripts/` and run:
+
+```bash
+npx hardhat run scripts/yourScript.js
 ```
 
 
