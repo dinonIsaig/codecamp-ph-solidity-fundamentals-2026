@@ -56,3 +56,13 @@ Important pointers:
 ## Conclusion
 
 Loops are powerful tools in Solidity that allow you to repeat code execution based on specific conditions. Understanding the different types of loops and their syntax is crucial for writing efficient and effective smart contracts.
+
+---
+
+## Code Overview (This Folder)
+
+- `loops.sol` demonstrates `while`, `for`, and `do-while` loops that fill a fixed array.
+
+## Files
+
+- `loops.sol`

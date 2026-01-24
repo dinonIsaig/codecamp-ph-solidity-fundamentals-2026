@@ -30,3 +30,12 @@ The `tx` variable provides information about the current transaction. It include
 
 The `now` variable returns the current timestamp in seconds since the Unix epoch (January 1, 1970).
 
+---
+
+## Code Overview (This Folder)
+
+- `vardemo.sol` returns `block.number`, `block.timestamp`, and `msg.sender`.
+
+## Files
+
+- `vardemo.sol`

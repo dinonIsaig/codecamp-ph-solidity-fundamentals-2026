@@ -39,3 +39,14 @@ Here are some important pointers to keep in mind while working with mappings and
 3. Learn about the limitations and best practices when using mappings in smart contracts.
 4. Explore different hashing algorithms available in Solidity and their use cases.
 5. Practice writing code examples to solidify your understanding of mappings and hashing.
+
+---
+
+## Code Overview (This Folder)
+
+- `demo.sol` maps roll numbers to names and to a `Student` struct.
+- Shows how to set mapping values via functions.
+
+## Files
+
+- `demo.sol`

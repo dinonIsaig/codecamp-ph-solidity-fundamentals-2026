@@ -57,3 +57,19 @@ When working with arrays in Solidity, it is important to consider the following 
 - Arrays can consume a significant amount of gas, so it is important to optimize their usage in smart contracts.
 
 For more detailed information and examples, refer to the Solidity documentation.
+
+---
+
+## Code Overview (This Folder)
+
+- `Arrays.sol` shows a fixed-size array with setter and length getter.
+- `DynamicArray.sol` demonstrates push/pop and length on a dynamic array.
+- `ByteArrays.sol` shows fixed-size `bytesN` arrays.
+- `DynamicByteArray.sol` shows dynamic `bytes` operations.
+
+## Files
+
+- `Arrays.sol`
+- `DynamicArray.sol`
+- `ByteArrays.sol`
+- `DynamicByteArray.sol`

@@ -36,3 +36,14 @@ Bộ sưu tập 6 bài tập được thiết kế dành riêng cho người m�
 
 Chúc bạn học Solidity thật vui và sớm deploy contract đầu tay lên mainnet! 🚀
 Tác giả: Phan Đức 
+
+---
+
+## Code Overview (This Folder)
+
+- `01_AddressBook.sol`: address book with per-user entries and search/remove.
+- `02_TokenTransfer.sol`: owner-minted token with basic transfer.
+- `03_SimpleBank.sol`: simple ETH bank with deposit/withdraw.
+- `04_SimpleToken.sol`: ERC-20 style token skeleton.
+- `05_Election.sol`: candidate voting system with winners.
+- `06_Lottery.sol`: timed lottery with ticket purchase and winner pick.

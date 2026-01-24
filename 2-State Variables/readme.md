@@ -65,3 +65,15 @@ contract Example {
     }
 }
 ```
+
+---
+
+## Code Overview (This Folder)
+
+- `State` defines two public state variables: `age` and `name`.
+- The constructor initializes `age` to `10`.
+- `setAge()` increments `age` by 1.
+
+## Files
+
+- `state.sol`: minimal state variable example with constructor and setter.

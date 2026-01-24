@@ -30,3 +30,18 @@ In Solidity, the `view` and `pure` keywords are used to specify the behavior of 
 Both `view` and `pure` functions are used to optimize contract performance by indicating that the function does not have any side effects. It is important to use the appropriate keyword based on the intended behavior of the function.
 
 Remember to use the `view` keyword for functions that retrieve data and the `pure` keyword for functions that perform computations without any external dependencies.
+
+---
+
+## Code Overview (This Folder)
+
+- `pure&view.sol` demonstrates `view` vs `pure` functions.
+  - `get()` reads state with `view`.
+  - `getter()` is marked `pure` but reads state (shows what not to do).
+  - `newgetter()` is `pure` and uses only local data.
+- `state.sol` shows getter/setter pattern for a state variable.
+
+## Files
+
+- `pure&view.sol`: view and pure examples.
+- `state.sol`: basic getter/setter example.

@@ -53,3 +53,13 @@ variable = (condition) ? value1 : value2;
 ```
 
 These are the key pointers to understand and use conditionals effectively in Solidity. By utilizing conditionals, you can create more dynamic and flexible smart contracts.
+
+---
+
+## Code Overview (This Folder)
+
+- `conditionals.sol` returns different strings based on whether an integer is positive, negative, or zero.
+
+## Files
+
+- `conditionals.sol`

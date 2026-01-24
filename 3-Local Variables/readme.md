@@ -82,3 +82,15 @@ contract Example {
     }
 }
 ```
+
+---
+
+## Code Overview (This Folder)
+
+- `local` declares a state variable `myname` but uses only local variables in `store()`.
+- `store()` creates a local `uint age = 40` and a `string memory name = "Khushi"`.
+- The function returns the local `age`, demonstrating stack/memory usage.
+
+## Files
+
+- `local.sol`: local variable and memory string example.

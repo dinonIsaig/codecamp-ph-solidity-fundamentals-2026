@@ -54,3 +54,12 @@ contract MyContract {
 }
 ```
 
+---
+
+## Code Overview (This Folder)
+
+- `Storage_Memory.sol` compares `memory` (copy) vs `storage` (reference) for arrays.
+
+## Files
+
+- `Storage_Memory.sol`

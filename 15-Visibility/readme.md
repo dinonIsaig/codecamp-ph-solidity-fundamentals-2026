@@ -15,3 +15,14 @@ The `internal` visibility keyword allows functions and state variables to be acc
 The `external` visibility keyword is similar to `public`, as it allows functions to be accessed externally. However, unlike `public`, external functions cannot be called internally within the contract. External functions are typically used for contract-to-contract communication, as they provide a lower gas cost compared to public functions.
 
 ![alt text](image1.png)
+
+---
+
+## Code Overview (This Folder)
+
+- `code.sol` shows public, private, internal, and external visibility.
+- Demonstrates inheritance access rules in `childdemo`.
+
+## Files
+
+- `code.sol`

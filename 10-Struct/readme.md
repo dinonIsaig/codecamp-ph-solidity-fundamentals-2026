@@ -48,3 +48,14 @@ personRef.age = 30;
 ```
 
 In the above example, we have created a pointer `personRef` that points to the `person1` struct instance. By modifying the `age` member variable of `personRef`, we are also modifying the `age` of the original `person1` struct instance.
+
+---
+
+## Code Overview (This Folder)
+
+- `struct.sol` defines a `Student` struct and initializes it in the constructor.
+- `updateDetails()` replaces the stored struct with a new instance.
+
+## Files
+
+- `struct.sol`

@@ -14,3 +14,14 @@ In Solidity, constructors are special functions that are automatically executed 
 - Constructors can have access modifiers such as `public`, `private`, or `internal`, controlling the visibility of the constructor.
 - Constructors can accept parameters, allowing for initialization with custom values.
 - Constructors can contain any valid Solidity code, including variable assignments, function calls, and event emissions.
+
+---
+
+## Code Overview (This Folder)
+
+- `cons.sol` initializes state in a constructor.
+- It shows a default constructor and a parameterized constructor pattern.
+
+## Files
+
+- `cons.sol`: constructor initialization example.

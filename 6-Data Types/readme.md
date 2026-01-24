@@ -97,3 +97,18 @@ if (isApproved && !isVerified) {
 
 In this example, the code inside the `if` block will be executed if `isApproved` is `true` and `isVerified` is `false`. Otherwise, the code inside the `else` block will be executed.
 
+---
+
+## Code Overview (This Folder)
+
+- `Integers.sol` shows signed and unsigned integer ranges and declarations.
+- `Bool.sol` demonstrates boolean state and conditional updates.
+- `Enum.sol` demonstrates enum values and comparisons.
+- `overflow.sol` shows uint8 overflow behavior in Solidity 0.8.x.
+
+## Files
+
+- `Integers.sol`
+- `Bool.sol`
+- `Enum.sol`
+- `overflow.sol`
