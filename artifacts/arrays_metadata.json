@@ -1,0 +1,295 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "clearArray",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllElements",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getElement",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isEmpty",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "length",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "popElement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "printPopElement",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "item",
+						"type": "uint256"
+					}
+				],
+				"name": "pushElement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "setElement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Shows how to work with dynamically-sized arrays in Solidity",
+			"kind": "dev",
+			"methods": {
+				"clearArray()": {
+					"details": "Removes all elements from the array"
+				},
+				"getAllElements()": {
+					"details": "Gets the entire array",
+					"returns": {
+						"_0": "The complete array"
+					}
+				},
+				"getElement(uint256)": {
+					"details": "Gets an element at a specific index",
+					"params": {
+						"index": "The position of the element to retrieve (0-based)"
+					},
+					"returns": {
+						"_0": "The value at the specified index"
+					}
+				},
+				"getSum()": {
+					"details": "Gets the sum of all elements in the array",
+					"returns": {
+						"_0": "The sum of all values in the array"
+					}
+				},
+				"isEmpty()": {
+					"details": "Checks if the array is empty",
+					"returns": {
+						"_0": "true if the array has no elements, false otherwise"
+					}
+				},
+				"length()": {
+					"details": "Gets the current length of the array",
+					"returns": {
+						"_0": "The number of elements in the array"
+					}
+				},
+				"popElement()": {
+					"details": "Removes the last element from the array"
+				},
+				"printPopElement()": {
+					"details": "Removes and returns the last element from the arrayIMPORTANT: Contains a potential reentrancy-like issue if used improperly       (though not actual reentrancy since it's not calling external contracts)",
+					"returns": {
+						"_0": "The value that was removed from the end of the array"
+					}
+				},
+				"pushElement(uint256)": {
+					"details": "Adds an element to the end of the array",
+					"params": {
+						"item": "The uint256 value to add to the array"
+					}
+				},
+				"setElement(uint256,uint256)": {
+					"details": "Updates an element at a specific index",
+					"params": {
+						"index": "The position of the element to update (0-based)",
+						"value": "The new value to store at the specified index"
+					}
+				}
+			},
+			"stateVariables": {
+				"arr": {
+					"details": "Dynamic array declaration"
+				}
+			},
+			"title": "Dynamic Array Demonstration",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"arr(uint256)": {
+					"notice": "No size specified in the declaration (contrasts with fixed-size arrays like uint256[4])Public visibility automatically generates a getter functionInitially empty (length = 0)Stored in storage, so modifications persist between transactions"
+				},
+				"clearArray()": {
+					"notice": "Sets the array length to 0, effectively clearing itMore gas efficient than popping all elements individuallyStorage slots are not actually cleared (just marked as unused)"
+				},
+				"getAllElements()": {
+					"notice": "Returns a copy of the current arrayFor large arrays, this can consume significant gasThe returned array is in memory, not storage"
+				},
+				"getElement(uint256)": {
+					"notice": "Demonstrates array element accessReverts if index is out of bounds (>= arr.length)"
+				},
+				"getSum()": {
+					"notice": "Demonstrates iterating through a dynamic arrayGas cost grows with array size (O(n) complexity)Could hit block gas limit for very large arrays"
+				},
+				"isEmpty()": {
+					"notice": "More readable than checking if length == 0"
+				},
+				"length()": {
+					"notice": "For dynamic arrays, length can change with each push/pop operationView function - doesn't modify contract state, no gas cost when called externally"
+				},
+				"popElement()": {
+					"notice": "Uses the pop() method which removes the last element and decreases length by 1Time complexity: O(1)Reverts if called on an empty arrayDoesn't return the removed value (use printPopElement() if you need the value)"
+				},
+				"printPopElement()": {
+					"notice": "Combines the functionality of peek (get last element) and popMore gas efficient than calling length() and arr[length-1] separatelyReverts if called on an empty array"
+				},
+				"pushElement(uint256)": {
+					"notice": "Uses the push() method which appends to the end and increases length by 1Time complexity: O(1) for single element (amortized, as storage may need to be extended)Gas cost increases with array size due to storage expansion costs"
+				},
+				"setElement(uint256,uint256)": {
+					"notice": "Demonstrates modifying array elementsReverts if index is out of bounds (>= arr.length)"
+				}
+			},
+			"notice": "Dynamic arrays can grow and shrink in size at runtimeUnlike fixed-size arrays, their length is not determined at compile timeUseful when the number of elements is unknown or variable",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"6-Array/DynamicArray.sol": "arrays"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"6-Array/DynamicArray.sol": {
+			"keccak256": "0x66a3c4e4fd7b8c75414b2a813b4d9bbbb969612ccc02f58a1345b17caaf233d3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://913027c8e4dfb2bcb49e187dc097357261c54358cd7eaa8438f6f281e851fb77",
+				"dweb:/ipfs/QmTV821Ryg1LLJBtatBVpk39JiA3bxC8ZgpiRyX5WM2m4p"
+			]
+		}
+	},
+	"version": 1
+}

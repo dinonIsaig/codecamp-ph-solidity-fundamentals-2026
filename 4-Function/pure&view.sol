@@ -1,24 +1,33 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.0 <0.9.0;
+// Using a specific compiler version for consistency and security
+pragma solidity ^0.8.0;
 
-contract local{
-    uint public age=10;
+contract Local {
+    // State variable stored in contract storage (persists on blockchain)
+    uint public age = 10;
 
-    //view is used only while reading the function
-    function get() public view returns (uint){
-        return age;
-    }
-    
-    //we cannot use Pure keyword here because the function has to read the state variable
-    function getter() public pure returns (uint){
-        return age;
+    // VIEW FUNCTION: Can read state but cannot modify it
+    // - No gas cost when called externally (read-only)
+    function get() public view returns (uint) {
+        return age;  // Reads the state variable 'age'
     }
 
-    //pure keyword is valid here
-    function newgetter() public pure returns (uint){
-        uint marks=100;
-        return marks;
+    // FIXED: Removed 'pure' (invalid here) and replaced with 'view'
+    // This function reads state, so it must be 'view', not 'pure'
+    function getter() public view returns (uint) {
+        return age;  // Reads the state variable 'age'
     }
 
-    //Pure is used in the places when you neither read or write the state variable
+    // PURE FUNCTION: Cannot read OR modify state
+    // - Only works with local variables or function arguments
+    // - No gas cost when called externally
+    function newGetter() public pure returns (uint) {
+        uint marks = 100;  // Local variable (exists only during execution)
+        return marks;      // Returns local variable
+    }
+
+    // NEW: Example showing state modification (neither view nor pure)
+    function setAge(uint _newAge) public {
+        age = _newAge;  // Modifies state - cannot be view/pure
+    }
 }

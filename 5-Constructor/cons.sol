@@ -1,19 +1,18 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.0 <0.9.0;
+pragma solidity 0.8.20;
 
-contract cons{
+contract SimpleStorage {
+    uint public storedValue;
 
-    uint public age=10;
-    uint public count;
-
-    //initializing the constructor for the function
-    constructor(){
-        count=10;
+    constructor(uint _initialValue) {
+        storedValue = _initialValue;
     }
 
-    //passing arguments to the constructor, these arguments are necessary to be provided before the deployment
-    constructor(uint new_count)
-    {
-        count=new_count;
+    function set(uint _newValue) public {
+        storedValue = _newValue;
+    }
+
+    function setDefault() public {
+        storedValue = 10;
     }
 }

@@ -1,0 +1,216 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "y",
+						"type": "uint256"
+					}
+				],
+				"name": "add",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "largeNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "convertToUint8",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "isGreater",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "safeAdd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Demonstrates the use of integer types in Solidity",
+			"kind": "dev",
+			"methods": {
+				"add(uint256,uint256)": {
+					"details": "Function to demonstrate integer operations",
+					"params": {
+						"x": "First integer value",
+						"y": "Second integer value"
+					},
+					"returns": {
+						"_0": "The sum of x and y"
+					}
+				},
+				"convertToUint8(uint256)": {
+					"details": "Function to show type conversion between integer sizes",
+					"params": {
+						"largeNumber": "A uint256 value"
+					},
+					"returns": {
+						"_0": "The value converted to uint8 (will truncate if too large)"
+					}
+				},
+				"isGreater(uint256,uint256)": {
+					"details": "Function to demonstrate integer comparison",
+					"params": {
+						"a": "First value to compare",
+						"b": "Second value to compare"
+					},
+					"returns": {
+						"_0": "true if a is greater than b, false otherwise"
+					}
+				},
+				"safeAdd(uint256,uint256)": {
+					"details": "Function to demonstrate safe math with require",
+					"params": {
+						"a": "First value",
+						"b": "Second value"
+					},
+					"returns": {
+						"_0": "The sum of a and b"
+					}
+				}
+			},
+			"stateVariables": {
+				"a": {
+					"details": "Unsigned integer (uint256)"
+				},
+				"b": {
+					"details": "Signed integer (int256)"
+				},
+				"count": {
+					"details": "Signed 256-bit integer initialized to 127"
+				},
+				"count2": {
+					"details": "Signed 16-bit integer initialized to -1233WARNING: -1233 is within int16 range, but values outside this range would cause compilation errors"
+				},
+				"count3": {
+					"details": "Signed 32-bit integer initialized to -123456"
+				},
+				"num": {
+					"details": "Unsigned 256-bit integer initialized to 23"
+				},
+				"num2": {
+					"details": "Unsigned 8-bit integer initialized to 255"
+				},
+				"num3": {
+					"details": "Unsigned 16-bit integer initialized to 26456WARNING: 26456 is within uint16 range, but values above 65,535 would cause compilation errors"
+				}
+			},
+			"title": "Integer Types Demo",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"add(uint256,uint256)": {
+					"notice": "Shows basic arithmetic with integersIn Solidity 0.8.0+, this will revert on overflow"
+				},
+				"convertToUint8(uint256)": {
+					"notice": "Demonstrates explicit type conversionWARNING: Values larger than 255 will be truncated"
+				},
+				"safeAdd(uint256,uint256)": {
+					"notice": "Shows manual overflow check (though Solidity 0.8.0+ does this automatically)"
+				}
+			},
+			"notice": "Solidity provides both signed and unsigned integers in various sizesInteger types are value types that can hold integer values of different sizes",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"6-Data Types/Integers.sol": "integertype"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"6-Data Types/Integers.sol": {
+			"keccak256": "0x968e70cf94d4932d8269319c408b3f687cd204842f4b87b5922e9f96fbe6cb60",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0dc3b2429d41a75e7443ab0d89cd10ff95f3d490e0fa5af186c6814f19176383",
+				"dweb:/ipfs/QmXYuRLT2pfsqHDvPM7dut4iQCkY9iCUTqX41qKA5SqeJY"
+			]
+		}
+	},
+	"version": 1
+}

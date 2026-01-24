@@ -1,0 +1,133 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "aliasName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "contact",
+						"type": "string"
+					}
+				],
+				"name": "addEntry",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "aliasName",
+						"type": "string"
+					}
+				],
+				"name": "findByAlias",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "aliasName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "contact",
+								"type": "string"
+							}
+						],
+						"internalType": "struct AddressBook.Entry",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getEntries",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "aliasName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "contact",
+								"type": "string"
+							}
+						],
+						"internalType": "struct AddressBook.Entry[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "aliasName",
+						"type": "string"
+					}
+				],
+				"name": "removeByAlias",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"15-Exercises/01_AddressBook.sol": "AddressBook"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"15-Exercises/01_AddressBook.sol": {
+			"keccak256": "0xcafa1d435fcb72df46708109b1b1677e1573b381ca893e0011db685b69a39db5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://80c16aba799f0da14d6d81157636a1d9350103e302eecb68cb5214f8c1a5c082",
+				"dweb:/ipfs/QmSC33Nhs4qXQPad2iBvKnj3hVL1SEEm2gdZB1eDHF5F1y"
+			]
+		}
+	},
+	"version": 1
+}

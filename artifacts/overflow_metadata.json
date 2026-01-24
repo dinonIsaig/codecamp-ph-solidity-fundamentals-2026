@@ -1,0 +1,165 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "decrement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMoney",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "money",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "resetToMax",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "safeSetter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uncheckedSetter",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Shows how Solidity 0.8.0+ handles integer overflow",
+			"kind": "dev",
+			"methods": {
+				"decrement()": {
+					"details": "Function to demonstrate underflow protection"
+				},
+				"getMoney()": {
+					"details": "Function to get the current value",
+					"returns": {
+						"_0": "The current value of money"
+					}
+				},
+				"resetToMax()": {
+					"details": "Function to reset the value to maximum"
+				},
+				"safeSetter()": {
+					"details": "Function that demonstrates safe increment with require check"
+				},
+				"setter()": {
+					"details": "Function that attempts to increment money by 1IMPORTANT: In production code, you should handle this case gracefully       or use SafeMath library for more control over error messages"
+				},
+				"uncheckedSetter()": {
+					"details": "Function that demonstrates using unchecked block to allow overflow",
+					"returns": {
+						"_0": "The new value after potential overflow"
+					}
+				}
+			},
+			"stateVariables": {
+				"money": {
+					"details": "Unsigned 8-bit integer initialized to maximum value (255)"
+				}
+			},
+			"title": "Integer Overflow Demonstration",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"decrement()": {
+					"notice": "Shows that Solidity also protects against underflowThis will revert if called when money = 0"
+				},
+				"money()": {
+					"notice": "uint8 can hold values from 0 to 255 (2^8 - 1)We initialize to 255 to demonstrate overflow on increment"
+				},
+				"resetToMax()": {
+					"notice": "Useful for testing the overflow behavior multiple times"
+				},
+				"safeSetter()": {
+					"notice": "This shows how to manually prevent overflowEven though Solidity 0.8.0+ has built-in overflow protection,         explicit checks can provide better error messages"
+				},
+				"setter()": {
+					"notice": "This will cause an overflow since money is already at max value (255)In Solidity 0.8.0+, this transaction will revert with:         \"Arithmetic operation underflowed or overflowed outside of unchecked block\""
+				},
+				"uncheckedSetter()": {
+					"notice": "Shows how to bypass Solidity's built-in overflow protectionWARNING: This is unsafe and should only be used when absolutely necessaryIn this case, money would wrap around to 0 (255 + 1 = 0)"
+				}
+			},
+			"notice": "This contract demonstrates the built-in overflow protection in modern SolidityIn versions before 0.8.0, this would silently wrap around (255 + 1 = 0)In 0.8.0+, this will revert with an overflow error",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"6-Data Types/overflow.sol": "overflow"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"6-Data Types/overflow.sol": {
+			"keccak256": "0xefc8acdb4d18bb62f44f81b762dfc7a4f60255f60225cf1e460caab9203336d2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://687336a56f97db4f317a0c9208d0cb961eef72bb95b75f6cc471353396eb34c4",
+				"dweb:/ipfs/Qmekf1cGrFz3iMpED9sQxA3NBrbQ3QUtaFpLmj9UQEmjbV"
+			]
+		}
+	},
+	"version": 1
+}

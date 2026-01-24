@@ -1,0 +1,292 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes1",
+						"name": "newByte",
+						"type": "bytes1"
+					}
+				],
+				"name": "appendToBytes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr1",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "b1",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "clearBytes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "clearDynamicArray",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDynamicArrayLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getElement",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getFromDynamicArray",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "newBytes",
+						"type": "bytes"
+					}
+				],
+				"name": "pushToDynamicArray",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "toString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Shows how to work with dynamic byte arrays and fixed-size byte arrays in Solidity",
+			"kind": "dev",
+			"methods": {
+				"appendToBytes(bytes1)": {
+					"details": "Correct implementation to append to a bytes array",
+					"params": {
+						"newByte": "The byte to append to b1"
+					}
+				},
+				"clearBytes()": {
+					"details": "Clears the bytes array (sets it to empty)"
+				},
+				"clearDynamicArray()": {
+					"details": "Clears the dynamic array of bytes arrays"
+				},
+				"getDynamicArrayLength()": {
+					"details": "Gets the length of the dynamic array of bytes arrays",
+					"returns": {
+						"_0": "The number of bytes arrays stored in arr1"
+					}
+				},
+				"getElement(uint256)": {
+					"details": "Gets an element from the bytes array at a specific index",
+					"params": {
+						"index": "The position of the byte to retrieve (0-based)"
+					},
+					"returns": {
+						"_0": "The byte at the specified index"
+					}
+				},
+				"getFromDynamicArray(uint256)": {
+					"details": "Gets an element from the dynamic array of bytes arrays",
+					"params": {
+						"index": "The position in arr1 to access"
+					},
+					"returns": {
+						"_0": "The bytes array at the specified index"
+					}
+				},
+				"getLength()": {
+					"details": "Gets the length of the bytes array",
+					"returns": {
+						"_0": "The number of bytes in b1"
+					}
+				},
+				"pushToDynamicArray(bytes)": {
+					"details": "Adds a new bytes array to the dynamic array of bytes arrays",
+					"params": {
+						"newBytes": "The bytes array to add to arr1"
+					}
+				},
+				"toString()": {
+					"details": "Converts the bytes array to a string",
+					"returns": {
+						"_0": "The string representation of b1"
+					}
+				}
+			},
+			"stateVariables": {
+				"arr1": {
+					"details": "Dynamic array of bytes arrays"
+				},
+				"b1": {
+					"details": "Fixed-size bytes array initialized with 'abc'"
+				}
+			},
+			"title": "Dynamic Byte Array Demonstration",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"appendToBytes(bytes1)": {
+					"notice": "Creates a new bytes array that combines the existing b1 with the new byte"
+				},
+				"arr1(uint256)": {
+					"notice": "This is an array where each element is itself a dynamic bytes arrayCan store any number of bytes arrays, each of variable lengthExample use case: storing multiple variable-length byte sequences"
+				},
+				"b1()": {
+					"notice": "bytes is a dynamic byte array (similar to byte[] in other languages)Unlike bytes1-bytes32, its size can vary and individual bytes can be modifiedInitialized with 'abc' which becomes [0x61, 0x62, 0x63] in hex"
+				},
+				"clearBytes()": {
+					"notice": "Demonstrates how to reset a bytes array"
+				},
+				"clearDynamicArray()": {
+					"notice": "Demonstrates how to reset a bytes[] array"
+				},
+				"getElement(uint256)": {
+					"notice": "Demonstrates accessing individual bytes in a bytes arrayReverts if index is out of bounds (>= b1.length)"
+				},
+				"getFromDynamicArray(uint256)": {
+					"notice": "Shows how to access elements in the bytes[] array"
+				},
+				"getLength()": {
+					"notice": "Shows how to get the current length of a dynamic bytes array"
+				},
+				"pushToDynamicArray(bytes)": {
+					"notice": "Demonstrates using the dynamic array (arr1) of bytes arrays"
+				},
+				"toString()": {
+					"notice": "Shows how to interpret bytes as a stringOnly works correctly for UTF-8 encoded text bytes"
+				}
+			},
+			"notice": "Demonstrates the differences between bytes (dynamic) and bytesN (fixed-size) types",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"6-Array/DynamicByteArray.sol": "DynamicByteArray"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"6-Array/DynamicByteArray.sol": {
+			"keccak256": "0x83893c2141954f6397f5f23812c1023a7c3b45ea263b12ca938014eb167dcc9d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cd800b618ca88c06fc6088bc422308d5678d9887e0ef08178367ebc928dec8f7",
+				"dweb:/ipfs/QmaBoR6whxdgMq9omCZxQ78cmbNgk2HQLTKnqTzpxktqWB"
+			]
+		}
+	},
+	"version": 1
+}

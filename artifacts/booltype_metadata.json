@@ -1,0 +1,156 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "areBothTrue",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					}
+				],
+				"name": "check",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isEitherTrue",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "toggleValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "val2",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "value",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This contract shows how to work with boolean values in Solidity",
+			"kind": "dev",
+			"methods": {
+				"areBothTrue()": {
+					"details": "Function to check if both boolean values are true",
+					"returns": {
+						"_0": "Returns true only if both value and val2 are true"
+					}
+				},
+				"check(uint256)": {
+					"details": "Function to check if input value is greater than 100",
+					"params": {
+						"a": "The uint256 value to check against 100"
+					},
+					"returns": {
+						"_0": "Returns true if a > 100, false otherwise"
+					}
+				},
+				"isEitherTrue()": {
+					"details": "Function to check if at least one boolean value is true",
+					"returns": {
+						"_0": "Returns true if either value or val2 is true"
+					}
+				},
+				"toggleValue()": {
+					"details": "Function to toggle the value between true and false"
+				}
+			},
+			"title": "BoolType Contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"toggleValue()": {
+					"notice": "This shows how to flip a boolean value"
+				}
+			},
+			"notice": "Demonstrates boolean state variables and conditional logic",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"6-Data Types/Bool.sol": "booltype"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"6-Data Types/Bool.sol": {
+			"keccak256": "0x9230ab807b27c537cfedac85b448fca4bce7f0f02871e2a767f300f6d51d0aba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://743c1c367452b9ceca5f89fbc41024dbfa8b65c179cec99392884acc6c6268a1",
+				"dweb:/ipfs/QmdsqXiWwyp8bTTycFWhTjGWaznuPDARcdLQcdyF56zVCX"
+			]
+		}
+	},
+	"version": 1
+}

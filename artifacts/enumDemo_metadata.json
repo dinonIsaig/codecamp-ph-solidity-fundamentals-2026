@@ -1,0 +1,209 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDefaultSize",
+				"outputs": [
+					{
+						"internalType": "enum enumDemo.size",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUserStatus",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lottery",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newStatus",
+						"type": "uint256"
+					}
+				],
+				"name": "setUserStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "u1",
+				"outputs": [
+					{
+						"internalType": "enum enumDemo.user",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "u2",
+				"outputs": [
+					{
+						"internalType": "enum enumDemo.user",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "u3",
+				"outputs": [
+					{
+						"internalType": "enum enumDemo.user",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Demonstrates the use of enums in Solidity",
+			"kind": "dev",
+			"methods": {
+				"changeOwner()": {
+					"details": "Function to change the owner status to not_allowed"
+				},
+				"getDefaultSize()": {
+					"details": "Function to get the current size",
+					"returns": {
+						"_0": "The current size enum value"
+					}
+				},
+				"getUserStatus()": {
+					"details": "Function to get the current user status as a string",
+					"returns": {
+						"_0": "A string representation of the current user status"
+					}
+				},
+				"owner()": {
+					"details": "Function to check owner status and potentially release lottery funds"
+				},
+				"setUserStatus(uint256)": {
+					"details": "Function to set a new user status",
+					"params": {
+						"newStatus": "The new status to set (0=allowed, 1=not_allowed, 2=wait)"
+					}
+				}
+			},
+			"stateVariables": {
+				"lottery": {
+					"details": "Lottery amount in wei "
+				},
+				"u1": {
+					"details": "User status set to allowed (value 0) "
+				},
+				"u2": {
+					"details": "User status set to not_allowed (value 1) "
+				},
+				"u3": {
+					"details": "User status set to wait (value 2) "
+				}
+			},
+			"title": "Enum Demo Contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"changeOwner()": {
+					"notice": "This shows how to update an enum state variable"
+				},
+				"getDefaultSize()": {
+					"notice": "Demonstrates returning an enum value"
+				},
+				"getUserStatus()": {
+					"notice": "This demonstrates how to work with enum values in a more user-friendly way"
+				},
+				"owner()": {
+					"notice": "This demonstrates how to use enums in conditional logicIf u1 is 'allowed', the lottery amount is set to 0 (released)"
+				},
+				"setUserStatus(uint256)": {
+					"notice": "Shows how to pass enum values as parameters"
+				}
+			},
+			"notice": "Enums are a way to create user-defined data types with a fixed set of named constantsThey improve code readability by using meaningful names instead of numeric values",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"6-Data Types/Enum.sol": "enumDemo"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"6-Data Types/Enum.sol": {
+			"keccak256": "0x6db96edcda0fa1ffbdb961892aa08a9893a7059699fb573a7847476cb05c0912",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8e0bb70550e42d5f62603665d8f90fe6baa7acb295b66bd992bf028d401086c8",
+				"dweb:/ipfs/QmSjRopxyhwPJHmctMH6W7zDzVBjiRuj8DEhRo1shNRyyM"
+			]
+		}
+	},
+	"version": 1
+}

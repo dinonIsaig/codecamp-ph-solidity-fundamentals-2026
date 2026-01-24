@@ -1,0 +1,249 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					}
+				],
+				"name": "check",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "condition",
+						"type": "bool"
+					}
+				],
+				"name": "checkBoolean",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					}
+				],
+				"name": "checkEvenOdd",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					}
+				],
+				"name": "checkRange",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					}
+				],
+				"name": "checkTernary",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "lower",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "upper",
+						"type": "int256"
+					}
+				],
+				"name": "isInRange",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Demonstrates if-else conditional logic in Solidity",
+			"kind": "dev",
+			"methods": {
+				"check(int256)": {
+					"details": "Checks the value of an integer and returns a descriptive stringGas cost: ~200-500 (very low, as it's a pure function with simple logic)Note: String operations in Solidity can be expensive in terms of deployment cost       but have low runtime cost for pure functionsComparison behavior: - a > 0: positive numbers - a < 0: negative numbers - a == 0: zero",
+					"params": {
+						"a": "The integer value to check"
+					},
+					"returns": {
+						"_0": "A string describing whether the input is positive, negative, or zero"
+					}
+				},
+				"checkBoolean(bool)": {
+					"details": "Demonstrates boolean conditions",
+					"params": {
+						"condition": "The boolean value to check"
+					},
+					"returns": {
+						"_0": "A string describing the boolean value"
+					}
+				},
+				"checkEvenOdd(int256)": {
+					"details": "Checks if a number is even or odd",
+					"params": {
+						"a": "The integer value to check"
+					},
+					"returns": {
+						"_0": "A string indicating whether the input is even or odd"
+					}
+				},
+				"checkRange(int256)": {
+					"details": "Checks the range of a number",
+					"params": {
+						"a": "The integer value to check"
+					},
+					"returns": {
+						"_0": "A string describing which range the number falls into"
+					}
+				},
+				"checkTernary(int256)": {
+					"details": "Alternative implementation using ternary operators",
+					"params": {
+						"a": "The integer value to check"
+					},
+					"returns": {
+						"_0": "A string describing whether the input is positive, negative, or zero"
+					}
+				},
+				"isInRange(int256,int256,int256)": {
+					"details": "Checks if a number is within a specific range",
+					"params": {
+						"a": "The number to check",
+						"lower": "The lower bound of the range",
+						"upper": "The upper bound of the range"
+					},
+					"returns": {
+						"_0": "true if the number is within the range (inclusive), false otherwise"
+					}
+				}
+			},
+			"title": "Conditional Statements in Solidity",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"check(int256)": {
+					"notice": "Pure function - doesn't read or modify contract stateDemonstrates if-else-if-else conditional structureUses signed integer (int) to allow negative values"
+				},
+				"checkBoolean(bool)": {
+					"notice": "Shows simple if-else with boolean values"
+				},
+				"checkEvenOdd(int256)": {
+					"notice": "Demonstrates modulo operation for parity checking"
+				},
+				"checkRange(int256)": {
+					"notice": "Demonstrates multiple conditions with logical operators"
+				},
+				"checkTernary(int256)": {
+					"notice": "Shows how the same logic can be implemented more concisely"
+				},
+				"isInRange(int256,int256,int256)": {
+					"notice": "Demonstrates compound conditions with logical AND"
+				}
+			},
+			"notice": "Shows how to implement decision making based on input valuesUses signed integers to demonstrate comparison with zero",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"8-Conditionals/conditionals.sol": "conditionals"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"8-Conditionals/conditionals.sol": {
+			"keccak256": "0x148c71401d25e05b86c9249a093354ddeb092b6e91a318898721ef6f34b8a22c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c538984e3cff77873c0872d39a25cb0ff8c679dfa1862b1f90fa8194260bc32c",
+				"dweb:/ipfs/QmSzUFqD9mg6kXGXgB78QV2biSruo5hoK8ex8kKxZPTPvH"
+			]
+		}
+	},
+	"version": 1
+}

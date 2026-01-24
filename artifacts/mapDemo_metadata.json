@@ -1,0 +1,346 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "data",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "class",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_roll",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "class",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "dataSetter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_key",
+						"type": "uint256"
+					}
+				],
+				"name": "getRollNo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_roll",
+						"type": "uint256"
+					}
+				],
+				"name": "getStudentData",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_key",
+						"type": "uint256"
+					}
+				],
+				"name": "keyExists",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_key",
+						"type": "uint256"
+					}
+				],
+				"name": "removeKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "roll_no",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_key",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"name": "setter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_roll",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newClass",
+						"type": "uint256"
+					}
+				],
+				"name": "updateStudentClass",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_roll",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "newName",
+						"type": "string"
+					}
+				],
+				"name": "updateStudentName",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Shows how to use mappings to store and retrieve data efficiently",
+			"kind": "dev",
+			"methods": {
+				"dataSetter(uint256,uint256,string)": {
+					"details": "Sets student data in the mappingGas cost: ~40,000-60,000 (higher due to struct storage)",
+					"params": {
+						"_roll": "The student's roll number (key)",
+						"class": "The class/grade the student is in",
+						"name": "The student's name"
+					}
+				},
+				"getRollNo(uint256)": {
+					"details": "Gets a value from the roll_no mapping",
+					"params": {
+						"_key": "The key to look up"
+					},
+					"returns": {
+						"_0": "The string value associated with the key, or empty string if not set"
+					}
+				},
+				"getStudentData(uint256)": {
+					"details": "Gets student data from the mapping",
+					"params": {
+						"_roll": "The student's roll number"
+					},
+					"returns": {
+						"_0": "The class and name of the student"
+					}
+				},
+				"keyExists(uint256)": {
+					"details": "Checks if a key exists in the roll_no mappingNote: There's no direct way to check if a key exists - we check if the value is empty",
+					"params": {
+						"_key": "The key to check"
+					},
+					"returns": {
+						"_0": "true if the key has a non-empty value, false otherwise"
+					}
+				},
+				"removeKey(uint256)": {
+					"details": "Removes a key-value pair from the roll_no mappingNote: The key still exists in the mapping but maps to an empty value",
+					"params": {
+						"_key": "The key to remove"
+					}
+				},
+				"setter(uint256,string)": {
+					"details": "Sets a value in the roll_no mappingGas cost: ~20,000-40,000 (varies based on storage operations)",
+					"params": {
+						"_key": "The uint256 key (e.g., student roll number)",
+						"_value": "The string value to associate with the key (e.g., student name)"
+					}
+				},
+				"updateStudentClass(uint256,uint256)": {
+					"details": "Updates the class of an existing studentRequires the student to already exist in the mapping",
+					"params": {
+						"_roll": "The student's roll number",
+						"newClass": "The new class to assign"
+					}
+				},
+				"updateStudentName(uint256,string)": {
+					"details": "Updates the name of an existing student",
+					"params": {
+						"_roll": "The student's roll number",
+						"newName": "The new name to assign"
+					}
+				}
+			},
+			"stateVariables": {
+				"data": {
+					"details": "Mapping from uint keys to Student struct values"
+				},
+				"roll_no": {
+					"details": "Mapping from uint256 keys to string valuesStorage Characteristics: - Doesn't occupy storage slots for unused keys - Keys are hashed to find the storage location - No length or way to enumerate keys - Very gas efficient for access (O(1) complexity)"
+				}
+			},
+			"title": "Mapping Demonstration in Solidity",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"data(uint256)": {
+					"notice": "Demonstrates using complex types (structs) as mapping valuesPublic visibility creates a getter that returns the entire struct"
+				},
+				"dataSetter(uint256,uint256,string)": {
+					"notice": "Shows how to store struct values in a mapping"
+				},
+				"getRollNo(uint256)": {
+					"notice": "Explicit getter function (though public mapping already provides one)"
+				},
+				"getStudentData(uint256)": {
+					"notice": "Shows how to retrieve struct data from a mapping"
+				},
+				"keyExists(uint256)": {
+					"notice": "Demonstrates how to check for key existence"
+				},
+				"removeKey(uint256)": {
+					"notice": "Sets the value to empty string, effectively removing the mapping entry"
+				},
+				"roll_no(uint256)": {
+					"notice": "Public visibility automatically creates a getter functionExample use case: mapping student roll numbers (keys) to student names (values)Keys are unique - setting a key twice overwrites the previous value"
+				},
+				"setter(uint256,string)": {
+					"notice": "Demonstrates how to store values in a mapping"
+				},
+				"updateStudentClass(uint256,uint256)": {
+					"notice": "Shows how to update specific fields in a struct stored in a mapping"
+				},
+				"updateStudentName(uint256,string)": {
+					"notice": "Shows how to update specific fields in a struct stored in a mapping"
+				}
+			},
+			"notice": "Mappings are key-value stores where keys map to valuesAnalogous to hash tables or dictionaries in other languagesAll mappings in Solidity are virtual - they don't store all keys, just the ones that have been set",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"10-Mapping/demo.sol": "mapDemo"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"10-Mapping/demo.sol": {
+			"keccak256": "0x91c97224dd721caa1352c88393d2e65f2aff67aa9526f69a3e7844b386f27611",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://151eccfd435c7b3edd8580515ff73f0f7b42ecd9994b9832fc12489bf3a2c391",
+				"dweb:/ipfs/QmZn8qMRzdrMF4BEmnoS1vMbhaBQWNRFUNebJVfLreogPo"
+			]
+		}
+	},
+	"version": 1
+}

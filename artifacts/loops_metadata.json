@@ -1,0 +1,256 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "count",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "dowhile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fixedForLoop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "forloop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getArray",
+				"outputs": [
+					{
+						"internalType": "uint256[3]",
+						"name": "",
+						"type": "uint256[3]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "loop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reset",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "startIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "safeForLoop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Demonstrates different loop constructs in Solidity",
+			"kind": "dev",
+			"methods": {
+				"dowhile()": {
+					"details": "Demonstrates a do-while loop structureGas cost: ~25,000-50,000 (varies based on iterations)"
+				},
+				"fixedForLoop()": {
+					"details": "Corrected version of the for loop"
+				},
+				"forloop()": {
+					"details": "Demonstrates a for loop structureBUG: This contains a logical error - it always writes to arr[count]CORRECT BEHAVIOR: Should use the loop index 'i' instead of 'count'Gas cost: ~25,000-50,000 (varies based on iterations)"
+				},
+				"getArray()": {
+					"details": "Gets the entire array",
+					"returns": {
+						"_0": "A copy of the array in memory"
+					}
+				},
+				"getCount()": {
+					"details": "Gets the current count value",
+					"returns": {
+						"_0": "The current value of count"
+					}
+				},
+				"getLength()": {
+					"details": "Gets the length of the array",
+					"returns": {
+						"_0": "The fixed length of the array (always 3)"
+					}
+				},
+				"loop()": {
+					"details": "Demonstrates a while loop structureWARNING: This function can only be called once completely       as it modifies the count state variableGas cost: ~50,000-75,000 (varies based on state changes)"
+				},
+				"reset()": {
+					"details": "Resets the count and array to initial state"
+				},
+				"safeForLoop(uint256,uint256)": {
+					"details": "Demonstrates a safe for loop with bounds checking",
+					"params": {
+						"endIndex": "The index to end at (exclusive)",
+						"startIndex": "The index to start from"
+					}
+				}
+			},
+			"stateVariables": {
+				"arr": {
+					"details": "Fixed-size array of 3 uint256 elements"
+				},
+				"count": {
+					"details": "Counter variable to track array position"
+				}
+			},
+			"title": "Loop Structures in Solidity",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"arr(uint256)": {
+					"notice": "Public visibility automatically generates a getter functionInitialized with default values [0, 0, 0]"
+				},
+				"count()": {
+					"notice": "Used across multiple loop functions to demonstrate state persistenceInitialized to 0"
+				},
+				"dowhile()": {
+					"notice": "Fills array positions starting from countEach position gets its index as valueGuaranteed to execute at least once"
+				},
+				"fixedForLoop()": {
+					"notice": "Properly fills array positions from count to endEach position gets its index as value"
+				},
+				"forloop()": {
+					"notice": "Attempts to fill array positions starting from count"
+				},
+				"getArray()": {
+					"notice": "Returns the current state of all array elementsFor large arrays, this could consume significant gas"
+				},
+				"getCount()": {
+					"notice": "Shows progress through the array"
+				},
+				"getLength()": {
+					"notice": "View function - no gas cost when called externally"
+				},
+				"loop()": {
+					"notice": "Fills the array with values following the pattern: 4, 10, 16Pattern: arr[count] = 2 * value, where value starts at 2 and increments by 3Stops when count reaches array length (3)"
+				},
+				"reset()": {
+					"notice": "Allows re-running the loop demonstrationsUseful for testing the contract multiple times"
+				},
+				"safeForLoop(uint256,uint256)": {
+					"notice": "Shows proper bounds checking to prevent out-of-bounds access"
+				}
+			},
+			"notice": "Shows while, for, and do-while loops with array operationsHighlights important considerations when using loops in smart contracts",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"7-Loops/loops.sol": "loops"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"7-Loops/loops.sol": {
+			"keccak256": "0xe0242da56d0b2f9416064d1d52cad590096c114a9521fd76a048bd017fbf85e4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://69092689f90d0419b26d1669285af5b267f3981d9623da9a67f2856b8b01481a",
+				"dweb:/ipfs/Qmf58uhQQZji4i4Uajj22Ye9nRoDaShrZLg9rLmBMWgdPD"
+			]
+		}
+	},
+	"version": 1
+}

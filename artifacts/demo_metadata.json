@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getMoreBlockInfo",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "blockHashValue",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "coinbase",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "prevRandao",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Shows how to access Ethereum blockchain global variables in Solidity",
+			"kind": "dev",
+			"methods": {
+				"getMoreBlockInfo()": {
+					"details": "Returns additional block information (updated for PoS)",
+					"returns": {
+						"blockHashValue": "The hash of one of the 256 most recent blocks",
+						"coinbase": "The current block miner's address (now validator in PoS)",
+						"prevRandao": "The randomness value from the Beacon Chain"
+					}
+				}
+			},
+			"title": "Global Variables Demonstration (Post-Paris Upgrade)",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getMoreBlockInfo()": {
+					"notice": "Shows updated global block variables after Paris upgrade"
+				}
+			},
+			"notice": "Updated for Ethereum's transition to Proof-of-Stake (Paris Upgrade)",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"12-Global Variables/vardemo.sol": "demo"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"12-Global Variables/vardemo.sol": {
+			"keccak256": "0x0940a21347f4211eb491421a797cec7257fad480f07b24bad17ad04d908a296c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0bd60d2ec23e6494a166e42023283d7d3a653de4d0f604bc4d6f5bb6828327dd",
+				"dweb:/ipfs/QmPMpbxXLi1LZwy4cwmBzVbD7RsVpU8Ncfdo1Ndtsjgdq4"
+			]
+		}
+	},
+	"version": 1
+}
